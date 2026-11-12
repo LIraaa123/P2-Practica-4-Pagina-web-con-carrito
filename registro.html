@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - Tienda Multimarca</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="ropa.html">Ropa</a>
+    <a href="cosmeticos.html">Cosméticos</a>
+    <a href="calzado.html">Calzado</a>
+    <a href="celulares.html">Celulares</a>
+    <a href="carrito.html">Carrito <span id="contador-carrito" class="badge-carrito">0</span></a>
+    <a href="registro.html">Registro / Login</a>
+  </nav>
+
+  <div class="box">
+    <h2>Registro de Usuario</h2>
+    <form id="form-registro">
+      <label>Nombre Completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+      <label>Correo Electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+
+      <label>Contraseña:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label>Marca de Interés Preferida:</label>
+      <select id="marca_preferida" name="marca_preferida">
+        <option value="Nike">Nike</option>
+        <option value="Adidas">Adidas</option>
+        <option value="Apple">Apple</option>
+        <option value="Samsung">Samsung</option>
+        <option value="MAC">MAC</option>
+        <option value="L'Oréal">L'Oréal</option>
+      </select>
+
+      <button type="submit" class="btn-submit">Registrarse</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>Desarrollado por: Lira Molina Dylan Daniel | Grupo: 5J</p>
+  </footer>
+
+  <script src="carrito.js"></script>
+  <script>
+    document.getElementById("form-registro").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const marca = document.getElementById("marca_preferida").value;
+      alert(`¡Bienvenido/a ${nombre}!\nTu cuenta ha sido registrada con preferencia en la marca ${marca}.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
