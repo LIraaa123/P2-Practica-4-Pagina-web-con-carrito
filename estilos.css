@@ -1,0 +1,320 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Barra de navegación */
+nav {
+  background-color: #1a252f;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+.badge-carrito {
+  background-color: #27ae60;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  margin-left: 4px;
+}
+
+/* Inicio y contenedores */
+.hero {
+  background: #3498db;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Cuadrícula de productos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.brand-ropa { color: #e67e22; }
+.brand-cosmeticos { color: #8e44ad; }
+.brand-calzado { color: #d35400; }
+.brand-celulares { color: #2980b9; }
+
+.price {
+  font-size: 18px;
+  color: #27ae60;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Botones */
+.btn-agregar {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.btn-agregar:hover {
+  background-color: #2980b9;
+}
+
+/* Formularios */
+.box {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn-submit {
+  width: 100%;
+  background: #3498db;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-submit:hover {
+  background: #2980b9;
+}
+
+/* Vista del Carrito */
+.tabla-carrito {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-carrito th,
+.tabla-carrito td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-carrito th {
+  background-color: #1a252f;
+  color: white;
+}
+
+.tabla-carrito img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.btn-cantidad {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.resumen-carrito {
+  background: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.total-texto {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.total-texto span {
+  color: #27ae60;
+}
+
+.acciones-carrito {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-vaciar {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-pagar {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-pagar:hover {
+  background-color: #219150;
+}
+
+.carrito-vacio {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Notificación flotante (Toast) */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #27ae60;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 14px 20px;
+  position: fixed;
+  z-index: 1000;
+  right: 25px;
+  bottom: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#toast.mostrar {
+  visibility: visible;
+}
+
+/* Pie de página */
+footer {
+  background: #1a252f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-weight: bold;
+}
